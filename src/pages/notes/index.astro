@@ -9,12 +9,15 @@ import FormattedDate from '../../components/FormattedDate.astro';
 const posts = (await getCollection('notes')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const combinedTitle = SITE_TITLE + " - Notes"
+const combinedDesc = SITE_DESCRIPTION + " - Notes"
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={combinedTitle} description={combinedDesc} />
 		<style>
 			main {
 				width: 960px;
