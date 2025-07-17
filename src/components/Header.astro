@@ -1,11 +1,15 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import favicon from '../../public/favicon.svg';
 ---
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<div class="container">
+			<a href="/"><img width="50px" src={favicon.src}></img></a>
+			<h2><a href="/">{SITE_TITLE}</a></h2>
+		</div>
 		<div class="internal-links">
 			<HeaderLink href="/">Resume</HeaderLink>
 			<HeaderLink href="/notes">Notes</HeaderLink>
@@ -66,4 +70,10 @@ import { SITE_TITLE } from '../consts';
 			display: none;
 		}
 	}
+	.container {
+	display: flex;
+	align-items: center;
+	justify-content: center
+	}
+}
 </style>
