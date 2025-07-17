@@ -1,5 +1,5 @@
 {
-  "name": "astro-frontend",
+  "name": "securef.dev",
   "description": "Build a personal website, blog, or portfolio with Astro.",
   "cloudflare": {
     "label": "Astro Framework Starter",
@@ -18,7 +18,7 @@
     "@astrojs/mdx": "4.3.0",
     "@astrojs/rss": "4.0.11",
     "@astrojs/sitemap": "3.4.1",
-    "astro": "^5.10.1",
+    "astro": "^5.12.0",
     "typescript": "5.8.3"
   },
   "devDependencies": {
@@ -38,12 +38,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Felipemguerra/astro-frontend.git"
+    "url": "git+https://github.com/Felipemguerra/securef.dev.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Felipemguerra/astro-frontend/issues"
+    "url": "https://github.com/Felipemguerra/securef.dev/issues"
   },
-  "homepage": "https://github.com/Felipemguerra/astro-frontend#readme"
+  "homepage": "https://github.com/Felipemguerra/securef.dev#readme"
 }
