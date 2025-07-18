@@ -5,10 +5,10 @@ pubDate: "Jul 14 2025"
 heroImage: "/blog-placeholder-1.jpg"
 ---
 
-# Felipe Guerra
+### Felipe Guerra
 
-Austin, Texas, United States  
-[felipe@securef.dev](mailto:felipe@securef.dev)	linkedin.com/in/guerra-felipe
+###### Austin, Texas, United States  
+###### [felipe@securef.dev](mailto:felipe@securef.dev) • [linkedin.com/in/guerra-felipe](https://www.linkedin.com/in/guerra-felipe)
 
 # **Summary**
 
