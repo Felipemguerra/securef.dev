@@ -4,15 +4,19 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 type Props = CollectionEntry<'resume'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+const combinedTitle = SITE_TITLE + " - " + title
+const combinedDesc = SITE_DESCRIPTION + " - " + description
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={combinedTitle} description={combinedDesc} />
 		<style>
 			main {
 				width: calc(100% - 2em);
