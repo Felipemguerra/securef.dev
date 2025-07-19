@@ -5,73 +5,47 @@ pubDate: "Jul 14 2025"
 heroImage: "/blog-placeholder-1.jpg"
 ---
 
-### Felipe Guerra
+## Felipe Guerra
 
-###### Austin, Texas, United States  
-###### [felipe@securef.dev](mailto:felipe@securef.dev) • [linkedin.com/in/guerra-felipe](https://www.linkedin.com/in/guerra-felipe)
+##### Austin, Texas, United States  
+##### [felipe@securef.dev](mailto:felipe@securef.dev) • [linkedin.com/in/guerra-felipe](https://www.linkedin.com/in/guerra-felipe)
 
-# **Summary**
-
+### Summary
 Application Security Engineer with 5+ years in Security, specializing in Vulnerability Management, Security Automation and Cloud Security.
 
-# **Experience**
+### Experience
+<hr>
 
-## ![][image1] **Advisory Project Delivery Specialist – Security Tester**
+##### Deloitte 
+<b><ins>Project Delivery Specialist – Application Security Tester (Mar 2025 – Present)</ins></b>
+- Automated(Veracode) and manual security assesments for web applcations
+- Integrate SAST into CICD
+- Automate tasks(NodeJS, Powershell)
 
-### Deloitte
-
-Mar 2025 – Present
-
-## ![][image2] **Information Security Engineer I → II**
-
-### CSI
-
-May 2022 – Feb 2025
-
-- Maintained CSPM platform Prisma Cloud
-
-- Developed Custom IaC security policies
-
-- Developed YAML pipeline templates to standardize image scanning and SAST
-
-- Provided guidance to architecture team for secure deployments of API endpoints
-
-- Maintained team infrastructure through Terraform
-
-- Oversaw Vulnerability Management(Qualys)
-
+##### CSI 
+<b><ins>Information Security Engineer I → II (May 2022 – Feb 2025)</b></ins>
+- Developed IaC security policies and YAML pipeline templates for image scanning and SAST
+- Provided guidance to dev teams for secure API and web application practices
+- Managed Vulnerability Management(Qualys) and CPSM(Prisma Cloud)
 - Provided penetration test guidance and oversight to internal audit
+- Automated tasks(NodeJS, Powershell) and maintained team infrastructure(Terraform)
 
-- Automated tasks using NodeJS and Powershell
-
-## ![][image3] **System/Network Admin → Network Manager**
-
-### Goodwill Industries of Southwest Florida
-
-May 2019 \- May 2022 (3 years 1 month)
-
-- Migrated Windows Datacenter infrastructure to Azure
-
-- Migrated Cisco/MSP network to Fortinet internal network
-
+##### Goodwill Industries of Southwest Florida 
+<b><ins>System/Network Admin → Network Manager (May 2019 - May 2022)</b></ins>
+- Migrated on-prem Windows datacenter to Azure
+- Migrated Cisco/MSP network to Fortinet
 - Managed M365 and Active Directory for 300+ users
-
 - Maintained PCI compliance through vulnerability scans(Tenable) and user phish testing
 
-# **Education**
+### Education & Qualifications
+<hr>
+<b><ins>Florida State University</b></ins><br>
+Bachelor of Science - BS, Computer Science
 
-## ![][image4] **Florida State University**
+<b><ins>Certifications</b></ins><br>
+CompTIA Security+ • 
+Microsoft Certified: Azure Fundamentals • 
+Microsoft Certified: Azure Security Engineer Associate
 
-Bachelor of Science \- BS, Computer Science
-
-# **Licenses & Certifications**
-
-**CompTIA Security+**
-
-**Microsoft Certified: Azure Fundamentals**
-
-**Microsoft Certified: Azure Security Engineer Associate**
-
-# **Skills**
-
+<b><ins>Skills</b></ins><br>
 Burp Suite • Veracode • Bridgecrew IaC • Azure DevOps • Palo Alto Prisma Cloud • Vulnerability Management(Qualys, Tenable) • Azure/AWS • Scripting(Powershell, Bash, Javascript) • Terraform/Terraform Cloud • RSA Archer
