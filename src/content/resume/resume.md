@@ -40,7 +40,7 @@ Application Security Engineer with 6+ years in Security, specializing in Vulnera
 <h5><ins> Deloitte </ins></h5>
 <b>Project Delivery Specialist – Application Security Tester (Mar 2025 – Present)</b>
 
-- Automated(Veracode) and manual security assesments for web applcations
+- Automated(Veracode) and manual security assessments for web applications
 - Integrate SAST into CICD
 - Automate tasks(NodeJS, Powershell)
 
