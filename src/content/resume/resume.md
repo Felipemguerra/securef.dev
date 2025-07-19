@@ -50,7 +50,7 @@ Application Security Engineer with 6+ years in Security, specializing in Vulnera
 
 - Developed IaC security policies and YAML pipeline templates for image scanning and SAST
 - Provided guidance to dev teams for secure API and web application practices
-- Managed Vulnerability Management(Qualys) and CPSM(Prisma Cloud)
+- Managed Vulnerability Management(Qualys) and CSPM(Prisma Cloud)
 - Provided penetration test guidance and oversight to internal audit
 - Automated tasks(NodeJS, Powershell) and maintained team infrastructure(Terraform)
 
