@@ -42,7 +42,7 @@ Application Security Engineer with 6+ years in Security, specializing in Vulnera
 
 - Automated(Veracode) and manual security assessments for web applications
 - Integrate SAST into CICD
-- Automate tasks(NodeJS, Powershell)
+- Automate tasks(Python, Powershell)
 
 <h5><ins> CSI </ins></h5>
 <b>Information Security Engineer II (March 2024 – Feb 2025)</b><br>
