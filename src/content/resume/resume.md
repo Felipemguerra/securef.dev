@@ -26,7 +26,7 @@ heroImage: "/blog-placeholder-1.jpg"
         content:"Download";
     }
 </style>
-<button class="button" onclick="window.open('./resume.pdf')"></button>
+<a href='./resume.pdf' download="resume.pdf"><button class="button"></button></a>
 
 ##### Austin, Texas, United States  
 ##### [felipe@securef.dev](mailto:felipe@securef.dev) • [linkedin.com/in/guerra-felipe](https://www.linkedin.com/in/guerra-felipe)
