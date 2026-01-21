@@ -5,54 +5,61 @@ pubDate: "Jul 14 2025"
 heroImage: "/blog-placeholder-3.jpg"
 ---
 
-# Sheet1
+#### Guide for Security Checks Using Developer Tools
 
-|Step-by-Step Manual for Application Security Checks Using Browser DeveloperTools|
-|---|
-| |
-| |
-|Tips for Documentation|
-|For    each step, include screenshots and sample findings.|
-|Document    both the process and the expected secure configuration.|
-|Note    any deviations or vulnerabilities found.|
-| |
-|1. Checking HTTP Security Headers|
-| |
-|Steps:|
-|1. Open    Developer Tools (F12 or Ctrl+Shift+I).|
-|2. Go    to the Network tab.|
-|3. Reload    the page to capture all network requests.|
-|4. Click    on the main document request (usually the first entry).|
-|5. In    the Headers section, review Response Headers for: |
-|1. Content-Security-Policy|
-|Content-Security-Policy:frame-ancestors 'none';|
-|This prevents any domain from framing the content.This setting is recommended unless a specific need has been identified forframing.|
-| |
-|2. Strict-Transport-Security|
-|https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html|
-|HTTP Strict Transport Security (HSTS) is a web securitypolicy that ensures that browsers always use HTTPS to connect to websites. Partof its purpose is to remove the need to redirect users from HTTP to HTTPSwebsite versions or secure any such redirects.|
-|3. X-Frame-Options|
-|DENY, which prevents any domain fromframing the content. The "DENY" setting is recommended unless aspecific need has been identified for framing.|
-| |
-|4. X-Content-Type-Options|
-|Content Security Policy (CSP) frame-ancestors directiveobsoletes X-Frame-Options for supporting browsers (source).|
-|X-Frame-Options header is only useful when the HTTP responsewhere it is included has something to interact with (e.g. links, buttons). Ifthe HTTP response is a redirect or an API returning JSON data, X-Frame-Optionsdoes not provide any security.|
-|Use Content Security Policy (CSP) frame-ancestors directiveif possible.|
-|Do not allow displaying of the page in a frame.|
-|X-Frame-Options: DENY|
-| |
-|5. Referrer-Policy|
+##### Tips for Documentation
+For each step, include screenshots and sample findings.  Document both the process and the expected secure configuration.  Note  any deviations or vulnerabilities found.
+
+##### 1. Checking HTTP Security Headers
+
+Steps:
+1. Open Developer Tools (F12 or Ctrl+Shift+I).
+2. Go to the Network tab.
+3. Reload the page to capture all network requests.
+4. Click on the main document request (usually the first entry).
+5. In the Headers section, review Response Headers for:
+
+```markdown
+Content-Security-Policy: frame-ancestors 'none';
+```
+This prevents any domain from framing the content.  This setting is recommended unless a specific need has been identified for framing.
+
+```markdown
+Strict-Transport-Security: max-age=86400; includeSubDomains
+```
+HTTP Strict Transport Security (HSTS) is a web securitypolicy that ensures that browsers always use HTTPS to connect to websites. Part of its purpose is to remove the need to redirect users from HTTP to HTTPS website versions or secure any such redirects.
+
+```markdown
+X-Frame-Options: DENY
+```
+The "DENY" setting prevents any domain from framing the content and is recommended unless aspecific need has been identified for framing. Content Security Policy (CSP) frame-ancestors directive obsoletes X-Frame-Options for supporting browsers.  X-Frame-Options header is only useful when the HTTP response where it is included has something to interact with (e.g. links, buttons).  If the HTTP response is a redirect or an API returning JSON data, X-Frame-Options does not provide any security.  Use Content Security Policy (CSP) frame-ancestors directive if possible.  Do not allow displaying of the page in a frame.
+
+```markdown
+X-Content-Type-Options: nosniff
+```
+X-Content-Type-Options indicates the MIME Content-Types should not be changed.  This allows you to avoid MIME type sniffing by browsers.
+
+```markdown
+Referrer-Policy: strict-origin-when-cross-origin
+```
+Referrer policy controls how much referrer information is included in requests
+
 |However,since not all users may be using the latest browserswe suggest forcing this behavior by sending this header on all responses.|
-|Referrer-Policy: strict-origin-when-cross-origin|
-| |
-|6. Permissions-Policy|
-|Set itand disable all the features that your site does not need or allow them only tothe authorized domains:|
-|Permissions-Policy: geolocation=(),camera=(), microphone=()|
-| |
-|7. Access-Control-Allow-Origin     (for CORS)|
-|8. Check     banner information such as ASP.NET version, IIS server version|
-|9. X-Powered-By     Header is NOT Present|
-|Check to ensure that X-Powered-By Header is NOT Present inHeader response|
+```markdown
+Permissions-Policy: geolocation=(),camera=(), microphone=()
+```
+Set it and disable all the features that your site does not need or allow them only to the authorized domains.
+
+```markdown
+Access-Control-Allow-Origin: *, <origin>
+```
+
+|8. Check banner information such as ASP.NET version, IIS server version|
+
+```markdown
+X-Powered-By Header is NOT Present.
+```
+Check to ensure that X-Powered-By Header is NOT Present inHeader response|
 | |
 |6. Note    missing or misconfigured headers.|
 |2. Cookie Security Attributes|
