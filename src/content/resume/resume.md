@@ -32,7 +32,7 @@ heroImage: "/blog-placeholder-1.jpg"
 ##### [felipe@securef.dev](mailto:felipe@securef.dev) • [linkedin.com/in/guerra-felipe](https://www.linkedin.com/in/guerra-felipe)
 
 ### Summary
-Application Security Engineer with 6+ years in Security, specializing in Vulnerability Management, Security Automation and Cloud Security.
+Application Security Engineer with 7+ years in Security, specializing in Vulnerability Management, Security Automation and Cloud Security.
 
 ### Experience
 <hr>
@@ -40,24 +40,25 @@ Application Security Engineer with 6+ years in Security, specializing in Vulnera
 <h5><ins> Deloitte </ins></h5>
 <b>Project Delivery Specialist – Application Security Tester (Mar 2025 – Present)</b>
 
-- Automated(Veracode) and manual security assessments for web applications
-- Integrate SAST into CICD
+- Automated(Veracode) and manual security assessments for 60+ web applications
+- Drive enterprise vulnerability Remediation for 200+ servers
+- Integrate SAST and Secret Scanning into CICD
 - Automate tasks(Python, Powershell)
 
-<h5><ins> CSI </ins></h5>
-<b>Information Security Engineer II (March 2024 – Feb 2025)</b><br>
-<b>Information Security Engineer I  (May 2022 – February 2024)</b>
+<h5><ins> Computer Services Inc. (CSI) </ins></h5>
+<b>Information Security Engineer II &nbsp;&nbsp;(Mar 2024 – Feb 2025)</b><br>
+<b>Information Security Engineer I &nbsp;&nbsp;&nbsp;(May 2022 – Feb 2024)</b>
 
 - Developed IaC security policies and YAML pipeline templates for image scanning and SAST
 - Provided guidance to dev teams for secure API and web application practices
-- Managed Vulnerability Management(Qualys) and CSPM(Prisma Cloud)
+- Oversaw Vulnerability Management(Qualys) and CSPM(Prisma Cloud)
 - Provided penetration test guidance and oversight to internal audit
 - Automated tasks(NodeJS, Powershell) and maintained team infrastructure(Terraform)
 
 <h5><ins> Goodwill Industries of Southwest Florida </ins></h5>
-<b>IT Network Manager (Oct 2021 - May 2022)</b><br>
-<b>Senior Network Administrator (March 2021 - Sep 2021)</b><br>
-<b>System Administrator (May 2019 - February 2021)</b>
+<b>IT Network Manager &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Oct 2021 - May 2022)</b><br>
+<b>Senior Network Administrator &nbsp;(Mar 2021 - Sep 2021)</b><br>
+<b>System Administrator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(May 2019 - Feb 2021)</b>
 
 - Migrated on-prem Windows datacenter to Azure
 - Migrated Cisco/MSP network to Fortinet
@@ -70,6 +71,9 @@ Application Security Engineer with 6+ years in Security, specializing in Vulnera
 
 <b><ins>Florida State University</b></ins><br>
 Bachelor of Science - BS, Computer Science
+
+<b><ins>Georgia Institue of Technology</b></ins><br>
+Master of Science - MS, Cybersecurity   -   Expected Graduation: Spring 2019
 
 <b><ins>Certifications</b></ins><br>
 CompTIA Security+ • 
