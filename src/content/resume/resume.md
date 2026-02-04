@@ -73,7 +73,7 @@ Application Security Engineer with 7+ years in Security, specializing in Vulnera
 Bachelor of Science - BS, Computer Science
 
 <b><ins>Georgia Institue of Technology</b></ins><br>
-Master of Science - MS, Cybersecurity   -   Expected Graduation: Spring 2019
+Master of Science - MS, Cybersecurity   -   Expected Graduation: Spring 2029
 
 <b><ins>Certifications</b></ins><br>
 CompTIA Security+ • 
