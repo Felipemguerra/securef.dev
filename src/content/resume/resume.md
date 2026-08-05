@@ -38,7 +38,7 @@ Application Security Engineer with 7+ years in Security, specializing in Vulnera
 <hr>
 
 <h5><ins> Deloitte </ins></h5>
-<b>Project Delivery Specialist – Application Security Tester (Mar 2025 – Present)</b>
+<b>Security Engineer III (Mar 2025 – Present)</b>
 
 - Automated(Veracode) and manual security assessments for 60+ web applications
 - Drive enterprise vulnerability Remediation for 200+ servers
