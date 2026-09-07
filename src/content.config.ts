@@ -27,9 +27,9 @@ const resume = defineCollection({
   }),
 });
 
-const repos = defineCollection({
-  // Load Markdown and MDX files in the `src/content/repos/` directory.
-  loader: glob({ base: "./src/content/repos", pattern: "**/*.{md,mdx}" }),
+const tools = defineCollection({
+  // Load Markdown and MDX files in the `src/content/tools/` directory.
+  loader: glob({ base: "./src/content/tools", pattern: "**/*.{md,mdx}" }),
   // Type-check frontmatter using a schema
   schema: z.object({
     title: z.string(),
@@ -42,4 +42,4 @@ const repos = defineCollection({
   }),
 });
 
-export const collections = { notes, resume, repos};
+export const collections = { notes, resume, tools};

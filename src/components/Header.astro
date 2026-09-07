@@ -3,6 +3,9 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import favicon from '../../public/favicon.svg';
 import ThemeIcon from './ThemeIcon.astro';
+import { getCollection } from 'astro:content';
+
+const tools = await getCollection('tools');
 ---
 
 <header>
@@ -14,7 +17,14 @@ import ThemeIcon from './ThemeIcon.astro';
 		<div class="internal-links">
 			<HeaderLink href="/">Resume</HeaderLink>
 			<HeaderLink href="/notes">Notes</HeaderLink>
-			<HeaderLink href="/repos">Repos</HeaderLink>
+			<div class="tools-menu">
+				<span class="tools-trigger">Tools</span>
+				<ul class="tools-dropdown">
+					{tools.map((tool) => (
+						<li><a href={`/tools/${tool.id}/`}>{tool.id}</a></li>
+					))}
+				</ul>
+			</div>
 		</div>
 		<div class="social-links">
 			<a href="mailto:felipe@securef.dev" target="_blank">
@@ -66,6 +76,50 @@ import ThemeIcon from './ThemeIcon.astro';
 	.social-links,
 	.social-links a {
 		display: flex;
+	}
+	.internal-links {
+		display: flex;
+		align-items: center;
+	}
+	.tools-menu {
+		position: relative;
+	}
+	.tools-trigger {
+		display: inline-block;
+		padding: 1em 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		cursor: pointer;
+	}
+	.tools-menu:hover .tools-trigger,
+	.tools-menu:focus-within .tools-trigger {
+		border-bottom-color: var(--accent);
+	}
+	.tools-dropdown {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+		display: none;
+		min-width: 9rem;
+		margin: 0;
+		padding: 0.5rem 0;
+		list-style: none;
+		background: white;
+		box-shadow: 0 2px 8px rgba(var(--black), 15%);
+		text-transform: capitalize;
+	}
+	.tools-menu:hover .tools-dropdown,
+	.tools-menu:focus-within .tools-dropdown {
+		display: block;
+	}
+	.tools-dropdown a {
+		display: block;
+		padding: 0.5rem 1rem;
+		white-space: nowrap;
+	}
+	.tools-dropdown a:hover {
+		background: rgb(var(--gray-light));
 	}
 	@media (max-width: 720px) {
 		.social-links {
