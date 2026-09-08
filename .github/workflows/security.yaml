@@ -11,13 +11,13 @@ permissions:
 
 jobs:
   baseline:
-    uses: Felipemguerra/configs/.github/workflows/security-baseline.yaml@master
+    uses: Felipemguerra/configs/actions/security-baseline.yaml@master
 
   semgrep:
-    uses: Felipemguerra/configs/.github/workflows/semgrep.yaml@master
+    uses: Felipemguerra/configs/actions/semgrep.yaml@master
 
   secret-scan:
-    uses: Felipemguerra/configs/.github/workflows/secret-scan.yaml@master
+    uses: Felipemguerra/configs/actions/secret-scan.yaml@master
     with:
       configs-ref: master
     secrets: inherit
