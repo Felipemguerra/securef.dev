@@ -1,0 +1,23 @@
+name: Security scans
+
+on:
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+  security-events: write
+  pull-requests: write
+
+jobs:
+  baseline:
+    uses: Felipemguerra/configs/.github/workflows/security-baseline.yaml@master
+
+  semgrep:
+    uses: Felipemguerra/configs/.github/workflows/semgrep.yaml@master
+
+  secret-scan:
+    uses: Felipemguerra/configs/.github/workflows/secret-scan.yaml@master
+    with:
+      configs-ref: master
+    secrets: inherit
