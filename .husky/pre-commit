@@ -1,0 +1,13 @@
+#!/bin/sh
+
+config_url="https://raw.githubusercontent.com/Felipemguerra/configs/refs/heads/master/gitleaks/config.toml"
+config_path="$(mktemp "${TMPDIR:-/tmp}/securef-gitleaks.XXXXXX")"
+trap 'rm -f "$config_path"' EXIT HUP INT TERM
+
+if ! curl --fail --silent --show-error --location "$config_url" --output "$config_path"; then
+  echo "Unable to download the public Gitleaks config: $config_url" >&2
+  exit 1
+fi
+
+gitleaks protect --staged --config="$config_path"
+npm run lint-staged
