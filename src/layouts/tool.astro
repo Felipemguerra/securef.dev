@@ -23,6 +23,7 @@ const markdownRawText = await response.text();
 				width: calc(100% - 2em);
 				max-width: 100%;
 				margin: 0;
+				font-size: 14px;
 			}
 			.hero-image {
 				width: 100%;
@@ -64,12 +65,7 @@ const markdownRawText = await response.text();
 		<main>
 			<article>
 				<div class="prose">
-					<div class="title">
-						<div>
-							<Markdown of={markdownRawText} /> 
-						</div>
-						<hr />
-					</div>
+					<Markdown of={markdownRawText} />
 					<slot />
 				</div>
 			</article>
