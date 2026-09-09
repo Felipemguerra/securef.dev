@@ -1,0 +1,12 @@
+#!/bin/sh
+
+config_path="$(git rev-parse --show-toplevel)/../configs/gitleaks/config.toml"
+
+if [ ! -f "$config_path" ]; then
+  echo "Gitleaks config not found: $config_path" >&2
+  echo "Clone the public configs repository beside securef.dev." >&2
+  exit 1
+fi
+
+gitleaks protect --staged --config="$config_path"
+npm run lint-staged
