@@ -1,10 +1,11 @@
 #!/bin/sh
 
-config_path="$(git rev-parse --show-toplevel)/../configs/gitleaks/config.toml"
+config_url="https://raw.githubusercontent.com/Felipemguerra/configs/refs/heads/master/gitleaks/config.toml"
+config_path="$(mktemp "${TMPDIR:-/tmp}/securef-gitleaks.XXXXXX")"
+trap 'rm -f "$config_path"' EXIT HUP INT TERM
 
-if [ ! -f "$config_path" ]; then
-  echo "Gitleaks config not found: $config_path" >&2
-  echo "Clone the public configs repository beside securef.dev." >&2
+if ! curl --fail --silent --show-error --location "$config_url" --output "$config_path"; then
+  echo "Unable to download the public Gitleaks config: $config_url" >&2
   exit 1
 fi
 
