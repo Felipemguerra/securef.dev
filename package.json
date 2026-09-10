@@ -36,7 +36,8 @@
     "check": "astro build && tsc && wrangler deploy --dry-run",
     "deploy": "wrangler deploy",
     "dev": "astro dev",
-    "lint": "prettier --check .",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write .",
     "lint-staged": "lint-staged",
     "prepare": "husky",
     "preview": "astro build && wrangler dev"

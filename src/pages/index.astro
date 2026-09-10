@@ -1,16 +1,15 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import Resume from '../layouts/resume.astro';
-import { getEntry, render } from 'astro:content';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Resume from "../layouts/resume.astro";
+import { getEntry, render } from "astro:content";
 
-const entry = await getEntry('resume', 'resume');
+const entry = await getEntry("resume", "resume");
 const { Content } = await render(entry);
-
 ---
 
 <Resume {...entry.data}>
-	<Content />
+  <Content />
 </Resume>

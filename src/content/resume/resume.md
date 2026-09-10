@@ -4,6 +4,7 @@ description: "Resume"
 pubDate: "Jul 14 2025"
 heroImage: "/blog-placeholder-1.jpg"
 ---
+
 <style>
     .button {
         padding: 0px 6px;
@@ -26,15 +27,19 @@ heroImage: "/blog-placeholder-1.jpg"
         content:"Download";
     }
 </style>
+
 <a href='./resume.pdf' download="resume.pdf"><button class="button"></button></a>
 
-##### Austin, Texas, United States  
+##### Austin, Texas, United States
+
 ##### [felipe@securef.dev](mailto:felipe@securef.dev) • [linkedin.com/in/guerra-felipe](https://www.linkedin.com/in/guerra-felipe)
 
 ### Summary
+
 Application Security Engineer with 7+ years in Security, specializing in Vulnerability Management, Security Automation and Cloud Security.
 
 ### Experience
+
 <hr>
 
 <h5><ins> Deloitte </ins></h5>
@@ -67,17 +72,18 @@ Application Security Engineer with 7+ years in Security, specializing in Vulnera
 <br>
 
 ### Education & Qualifications
+
 <hr>
 
 <b><ins>Florida State University</b></ins><br>
 Bachelor of Science - BS, Computer Science
 
 <b><ins>Georgia Institue of Technology</b></ins><br>
-Master of Science - MS, Cybersecurity   -   Expected Graduation: Spring 2029
+Master of Science - MS, Cybersecurity - Expected Graduation: Spring 2029
 
 <b><ins>Certifications</b></ins><br>
-CompTIA Security+ • 
-Microsoft Certified: Azure Fundamentals • 
+CompTIA Security+ •
+Microsoft Certified: Azure Fundamentals •
 Microsoft Certified: Azure Security Engineer Associate
 
 <b><ins>Skills</b></ins><br>
