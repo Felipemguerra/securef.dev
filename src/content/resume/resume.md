@@ -36,7 +36,7 @@ heroImage: "/blog-placeholder-1.jpg"
 
 ### Summary
 
-Application Security Engineer with 7+ years in Security, specializing in Vulnerability Management, Security Automation and Cloud Security.
+Application Security Engineer with 7+ years in Security, specializing in Vulnerability Management, Web App Testing and DevSecOps.
 
 ### Experience
 
