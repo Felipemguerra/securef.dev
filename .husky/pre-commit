@@ -2,6 +2,7 @@
 
 config_url="https://raw.githubusercontent.com/Felipemguerra/configs/refs/heads/master/gitleaks/config.toml"
 config_path="$(mktemp "${TMPDIR:-/tmp}/securef-gitleaks.XXXXXX")"
+gitleaks_command="gitleaks"
 trap 'rm -f "$config_path"' EXIT HUP INT TERM
 
 if ! curl --fail --silent --show-error --location "$config_url" --output "$config_path"; then
@@ -9,5 +10,46 @@ if ! curl --fail --silent --show-error --location "$config_url" --output "$confi
   exit 1
 fi
 
-gitleaks git --config="$config_path" --verbose --gitleaks-ignore-path ".gitleaksignore" --redact=80
+if ! command -v gitleaks >/dev/null 2>&1; then
+  case "$(uname -s)" in
+    Darwin*)
+      if ! command -v brew >/dev/null 2>&1; then
+        echo "Gitleaks is not installed and Homebrew is unavailable. Install Homebrew, then retry the commit." >&2
+        exit 1
+      fi
+      brew install gitleaks
+      ;;
+    MINGW*|MSYS*|CYGWIN*)
+      if command -v winget >/dev/null 2>&1; then
+        if ! winget list --id Gitleaks.Gitleaks --exact --source winget | grep -qi "Gitleaks.Gitleaks"; then
+          winget install --id Gitleaks.Gitleaks --exact --source winget --accept-source-agreements --accept-package-agreements
+        fi
+      elif command -v choco >/dev/null 2>&1; then
+        choco install gitleaks --yes
+      else
+        echo "Gitleaks is not installed and neither winget nor Chocolatey is available. Install Gitleaks, then retry the commit." >&2
+        exit 1
+      fi
+      ;;
+    *)
+      echo "Gitleaks is not installed. Install it for your operating system, then retry the commit." >&2
+      exit 1
+      ;;
+  esac
+  hash -r 2>/dev/null || true
+fi
+
+if ! command -v "$gitleaks_command" >/dev/null 2>&1 && command -v powershell.exe >/dev/null 2>&1 && command -v cygpath >/dev/null 2>&1; then
+  gitleaks_path="$(powershell.exe -NoProfile -NonInteractive -Command '$root = Join-Path $env:LOCALAPPDATA "Microsoft\WinGet\Packages"; Get-ChildItem -Path $root -Filter gitleaks.exe -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName' | tr -d '\r')"
+  if [ -n "$gitleaks_path" ]; then
+    gitleaks_command="$(cygpath -u "$gitleaks_path")"
+  fi
+fi
+
+if ! command -v "$gitleaks_command" >/dev/null 2>&1; then
+  echo "Gitleaks installation completed, but the command is not available in PATH. Restart your terminal and retry the commit." >&2
+  exit 1
+fi
+
+"$gitleaks_command" git --config="$config_path" --verbose --gitleaks-ignore-path ".gitleaksignore" --redact=80
 npm run lint:check

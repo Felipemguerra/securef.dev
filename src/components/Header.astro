@@ -138,13 +138,14 @@ const tools = await getCollection("tools");
     left: 0;
     z-index: 10;
     display: none;
-    min-width: 9rem;
+    min-width: 1rem;
     margin: 0;
     padding: 0.5rem 0;
     list-style: none;
     background: white;
     box-shadow: 0 2px 8px rgba(var(--black), 15%);
     text-transform: capitalize;
+    font-size: 14px;
   }
   .tools-menu:hover .tools-dropdown,
   .tools-menu:focus-within .tools-dropdown {
@@ -152,7 +153,7 @@ const tools = await getCollection("tools");
   }
   .tools-dropdown a {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 0.6rem;
     white-space: nowrap;
   }
   .tools-dropdown a:hover {
