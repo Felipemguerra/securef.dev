@@ -16,7 +16,7 @@ const notes = defineCollection({
 });
 
 const resume = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -42,4 +42,4 @@ const tools = defineCollection({
   }),
 });
 
-export const collections = { notes, resume, tools};
+export const collections = { notes, resume, tools };

@@ -9,5 +9,5 @@ if ! curl --fail --silent --show-error --location "$config_url" --output "$confi
   exit 1
 fi
 
-gitleaks protect --staged --config="$config_path"
-#npm run lint-staged
+gitleaks git --config="$config_path" --verbose --gitleaks-ignore-path ".gitleaksignore" --redact=80
+npm run lint:check
