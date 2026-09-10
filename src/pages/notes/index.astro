@@ -20,40 +20,32 @@ const combinedDesc = SITE_DESCRIPTION + " - Notes"
 		<BaseHead title={combinedTitle} description={combinedDesc} />
 		<style>
 			main {
-				width: 960px;
+				width: 60%;
 			}
 			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
 			}
 			ul li {
-				width: calc(50% - 1rem);
+				width: 100%;
+				margin-bottom: 1rem;
 			}
 			ul li * {
 				text-decoration: none;
 				transition: 0.2s ease;
 			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
 			ul li img {
-				margin-bottom: 0.5rem;
+				width: 180px;
+				height: 90px;
+				object-fit: cover;
 				border-radius: 12px;
 			}
 			ul li a {
-				display: block;
+				display: grid;
+				grid-template-columns: 180px 1fr;
+				gap: 1rem;
+				align-items: center;
 			}
 			.title {
 				margin: 0;
@@ -77,13 +69,14 @@ const combinedDesc = SITE_DESCRIPTION + " - Notes"
 				}
 				ul li {
 					width: 100%;
-					text-align: center;
 				}
-				ul li:first-child {
-					margin-bottom: 0;
+				ul li img {
+					width: 120px;
+					height: 60px;
 				}
-				ul li:first-child .title {
-					font-size: 1.563em;
+				ul li a {
+					grid-template-columns: 120px 1fr;
+					gap: 0.75rem;
 				}
 			}
 		</style>
@@ -99,9 +92,6 @@ const combinedDesc = SITE_DESCRIPTION + " - Notes"
 								<a href={`/notes/${post.id}/`}>
 									<img width={720} height={360} src={post.data.heroImage} alt="" />
 									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
 								</a>
 							</li>
 						))
