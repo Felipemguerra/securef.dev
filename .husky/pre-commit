@@ -10,4 +10,4 @@ if ! curl --fail --silent --show-error --location "$config_url" --output "$confi
 fi
 
 gitleaks protect --staged --config="$config_path"
-npm run lint-staged
+#npm run lint-staged

@@ -1,5 +1,5 @@
 ---
-title: "Manual Application Testing"
+title: "Application Testing Guide"
 description: "Manual checklist for testing Web Applications."
 pubDate: "Jul 14 2025"
 heroImage: "/blog-placeholder-3.jpg"
