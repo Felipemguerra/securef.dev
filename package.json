@@ -14,12 +14,12 @@
     "publish": true
   },
   "dependencies": {
-    "@astrojs/cloudflare": "12.6.0",
-    "@astrojs/mdx": "4.3.0",
-    "@astrojs/rss": "4.0.11",
-    "@astrojs/sitemap": "3.4.1",
+    "@astrojs/cloudflare": "^14.3.1",
+    "@astrojs/mdx": "^8.0.1",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
     "@astropub/md": "^1.0.0",
-    "astro": "^5.16.6",
+    "astro": "^7.3.2",
     "typescript": "5.8.3"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^1.0.0",
-    "wrangler": "4.21.x"
+    "wrangler": "^4.131.0"
   },
   "scripts": {
     "astro": "astro",

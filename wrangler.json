@@ -1,6 +1,6 @@
 {
   "name": "securef-dev",
-  "compatibility_date": "2025-04-01",
+  "compatibility_date": "2026-09-10",
   "compatibility_flags": ["nodejs_compat"],
   "main": "./dist/_worker.js/index.js",
   "assets": {
@@ -11,15 +11,10 @@
     "logs": {
       "enabled": true,
       "head_sampling_rate": 1,
-      "invocation_logs": true,
-      "persist": true
-    },
-    "traces": {
-      "enabled": true,
-      "head_sampling_rate": 1,
-      "persist": true
+      "invocation_logs": true
     }
   },
   "upload_source_maps": true,
-  "workers_dev": false
+  "workers_dev": false,
+  "preview_urls": false
 }
