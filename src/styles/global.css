@@ -114,11 +114,16 @@ code {
   border-radius: 2px;
 }
 pre {
+  margin: 1.5em 0;
   padding: 1.5em;
+  overflow-x: auto;
+  background-color: rgb(var(--gray-dark));
+  border: 1px solid rgba(var(--gray-dark), 25%);
   border-radius: 8px;
 }
 pre > code {
   all: unset;
+  color: rgb(var(--gray-light));
 }
 blockquote {
   border-left: 4px solid var(--accent);
