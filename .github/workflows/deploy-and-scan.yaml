@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy and OWASP ZAP baseline Scan
 
 on:
   push:
