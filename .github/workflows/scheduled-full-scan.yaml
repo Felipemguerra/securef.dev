@@ -11,6 +11,6 @@ permissions:
 
 jobs:
   scan:
-    uses: Felipemguerra/configs/.github/workflows/zap-full-scan.yaml@master
+    uses: securefdev/configs/.github/workflows/zap-full-scan.yaml@master
     with:
       production-url: https://securef.dev

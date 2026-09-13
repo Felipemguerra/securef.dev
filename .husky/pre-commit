@@ -1,6 +1,6 @@
 #!/bin/sh
 
-config_url="https://raw.githubusercontent.com/Felipemguerra/configs/refs/heads/master/gitleaks/config.toml"
+config_url="https://raw.githubusercontent.com/securefdev/configs/refs/heads/master/gitleaks/config.toml"
 config_path="$(mktemp "${TMPDIR:-/tmp}/securef-gitleaks.XXXXXX")"
 gitleaks_command="gitleaks"
 trap 'rm -f "$config_path"' EXIT HUP INT TERM
