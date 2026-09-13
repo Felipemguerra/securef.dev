@@ -1,10 +1,13 @@
-name: Security scans
+name: Security Checks
 
 on:
   pull_request:
     branches:
       - master
-    types: [opened, reopened]
+    types: [opened, reopened, synchronize, ready_for_review]
+  push:
+    branches:
+      - master
 
 permissions:
   contents: read

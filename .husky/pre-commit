@@ -52,4 +52,5 @@ if ! command -v "$gitleaks_command" >/dev/null 2>&1; then
 fi
 
 "$gitleaks_command" git --config="$config_path" --verbose --gitleaks-ignore-path ".gitleaksignore" --redact=80
+npm run audit:dependencies
 npm run lint:check
