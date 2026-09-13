@@ -31,6 +31,7 @@
   },
   "scripts": {
     "astro": "astro",
+    "audit:dependencies": "npm audit --audit-level=high",
     "build": "astro build",
     "cf-typegen": "wrangler types",
     "check": "astro build && tsc && wrangler deploy --dry-run",

@@ -1,0 +1,16 @@
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  deploy:
+    uses: Felipemguerra/configs/.github/workflows/deploy.yaml@master
+    with:
+      production-url: https://securef.dev
+    secrets: inherit
