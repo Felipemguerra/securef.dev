@@ -11,13 +11,13 @@ permissions:
 
 jobs:
   deploy:
-    uses: Felipemguerra/configs/.github/workflows/wrangler-deploy.yaml@master
+    uses: securefdev/configs/.github/workflows/wrangler-deploy.yaml@master
     secrets:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
   scan:
-    uses: Felipemguerra/configs/.github/workflows/zap-baseline-scan.yaml@master
+    uses: securefdev/configs/.github/workflows/zap-baseline-scan.yaml@master
     needs: deploy
     with:
       production-url: https://securef.dev
