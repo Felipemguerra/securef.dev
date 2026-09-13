@@ -1,0 +1,16 @@
+name: Scheduled OWASP ZAP full scan
+
+on:
+  schedule:
+    - cron: "30 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  scan:
+    uses: Felipemguerra/configs/.github/workflows/zap-full-scan.yaml@master
+    with:
+      production-url: https://securef.dev
