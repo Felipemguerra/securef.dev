@@ -17,7 +17,7 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
   scan:
-    uses: Felipemguerra/configs/.github/workflows/zap-scan.yaml@master
+    uses: Felipemguerra/configs/.github/workflows/zap-baseline-scan.yaml@master
     needs: deploy
     with:
       production-url: https://securef.dev
